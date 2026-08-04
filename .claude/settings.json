@@ -1,0 +1,11 @@
+{
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
+  },
+  "model": "opusplan",
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
