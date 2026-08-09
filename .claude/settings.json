@@ -2,10 +2,33 @@
   "env": {
     "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
   },
-  "model": "opusplan",
   "permissions": {
     "allow": [
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(tee /tmp/test-out.log)",
+      "Bash(pnpm --filter @mini/lib test -- ui-button)",
+      "Read(//tmp/**)",
+      "Bash(pnpm --filter lib vitest run ui-button)",
+      "Bash(npx tsc *)",
+      "Bash(git --no-pager diff -- docs/tasks/button-component.md)",
+      "Bash(echo \"---exit $?---\")",
+      "Bash(echo \"---exit:$?---\")",
+      "Bash(echo \"exit:$?\")",
+      "Bash(echo \"lint-exit:$?\")",
+      "Bash(echo \"typecheck-exit:$?\")",
+      "Bash(echo \"---typecheck exit: $?---\")",
+      "Bash(echo \"---lint exit: $?---\")",
+      "Bash(echo \"typecheck exit: $?\")",
+      "Bash(echo \"lint exit: $?\")",
+      "Bash(git -C c:/dev/JOSEAI4 status --porcelain=v1 -- src/lib/widgets/button-group/)",
+      "Bash(git -C c:/dev/JOSEAI4 log --oneline --all -- src/lib/widgets/button-group/)",
+      "Bash(git -C c:/dev/JOSEAI4 show --stat 9800ebc)",
+      "Bash(pnpm typecheck *)",
+      "Bash(echo \"typecheck exit:$?\")",
+      "Bash(pnpm lint *)",
+      "Bash(echo \"lint exit:$?\")",
+      "Bash(git status *)"
     ]
-  }
+  },
+  "model": "opusplan"
 }
